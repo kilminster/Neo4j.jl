@@ -1,0 +1,8 @@
+name = "Neo4j"
+uuid = "800bcfb3-1b81-43d4-b649-08f05c30ff43"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
+Missings = "e1d29d7a-bbdc-5cf2-9ac0-f12de2c33e28"

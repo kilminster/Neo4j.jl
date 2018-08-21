@@ -3,8 +3,6 @@
 # transaction can be a single request, or it can be held open through many
 # requests as a means of batching jobs together.
 
-using Compat
-
 export transaction, rollback, commit
 
 struct Transaction
@@ -30,7 +28,7 @@ function transaction(conn::Connection)
   Transaction(conn, respdata["commit"], respheaders["Location"], Statement[])
 end
 
-@compat function (txn::Transaction)(cypher::AbstractString, params::Pair...;
+function (txn::Transaction)(cypher::AbstractString, params::Pair...;
     submit::Bool=false)
   append!(txn.statements, [Statement(cypher, Dict(params))])
   if submit
