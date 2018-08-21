@@ -2,6 +2,7 @@ module Neo4j
 
 using HTTP
 using JSON
+using Base64
 
 export getgraph, version, createnode, getnode, deletenode, setnodeproperty, getnodeproperty,
        getnodeproperties, updatenodeproperties, deletenodeproperties, deletenodeproperty,
